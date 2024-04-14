@@ -5,7 +5,7 @@ function Home(){
     return (
         <div>
             <h1>Home</h1>
-            <p>Página usada para testar e praticar as funcionalidades do React.</p>
+            <p>Teste react</p>
             <Link to='/Formulario'>Formulario</Link>
             <br></br>
             <Link to='/Tarefas'>Tarefas</Link>
