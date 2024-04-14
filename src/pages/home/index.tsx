@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import formStyles from "../../components/footer/footer.module.css";
 //<img src=""/>
 
 function Home(){
@@ -11,6 +12,11 @@ function Home(){
             <Link to='/Tarefas'>Tarefas</Link>
             <br></br>
             <Link to='/Sobre'>Sobre</Link>
+            <footer className={formStyles.footer}>
+            <p>&copy; 2024 - Todos os direitos reservados</p>
+	        <p>Entre em contato pelo e-mail: sabrina.onishi@gmail.com</p>
+            </footer>
+            
         </div>
     )
 }
