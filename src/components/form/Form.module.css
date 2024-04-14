@@ -8,3 +8,9 @@
     background-color: rgb(247, 247, 247);
     padding: 10px 25px;
 }
+
+.link {
+
+    display: block;
+    text-align: center;
+}

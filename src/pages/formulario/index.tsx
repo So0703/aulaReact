@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
-import Form from "../../components/form"
+import Form from "../../components/form";
+import formStyles from "../../components/form/Form.module.css";
 
 function Formulario(){
     return (
         <div>
             <Form></Form>
-            <Link to='/'>Voltar para Home</Link>
+            <Link to='/' className={formStyles.link}>Voltar para Home</Link>
         </div>
     )
 }
