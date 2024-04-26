@@ -1,12 +1,13 @@
 import Layout from "../../components/layout"
-import InputTaskForm from "../../components/input-fatec"
+import ContactFormWithSocialButtons from "../../components/input-fatec"
+
 
 
 function Tarefas(){
     return (
         <>
         <Layout>
-            <InputTaskForm/>
+            <ContactFormWithSocialButtons/>
         </Layout>
      </>
     )

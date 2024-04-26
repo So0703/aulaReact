@@ -56,7 +56,6 @@ export default function Topo() {
                 onClick={isOpen ? onClose : onOpen}
                 />
                 <HStack spacing={8} alignItems={'center'}>
-                    <Box>Logo</Box>
                     <HStack as={'nav'} spacing={4} display={{base: 'none', md: 'flex'}}>
                         {Links.map((link) => (
                             <NavLink href={link.href} key={link.texto}> {link.texto} </NavLink>

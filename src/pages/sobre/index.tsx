@@ -1,11 +1,11 @@
 import Layout from "../../components/layout"
-import CallToActionWithVideo from "../../components/informacao"
+import BlogPostWithoutImage from "../../components/informacao"
 
 function Sobre(){
     return (
         <>
         <Layout>
-           <CallToActionWithVideo/> 
+           <BlogPostWithoutImage/> 
         </Layout>
      </>
         

@@ -1,4 +1,3 @@
-import Image from '../../assets/images/free-images.jpg';
 import {
   Box,
   Center,
@@ -7,9 +6,10 @@ import {
   Stack,
   Avatar,
   useColorModeValue,
+  Image, // Alterado de Img para Image
 } from '@chakra-ui/react';
 
-export default function blogPostWithImage() {
+export default function BlogPostWithoutImage() {
   return (
     <Center py={6}>
       <Box
@@ -29,9 +29,12 @@ export default function blogPostWithImage() {
           pos={'relative'}>
           <Image
             src={
-              'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+              'https://gifdb.com/images/high/going-crazy-mad-lilo-and-stitch-meme-bgsgwe3mrslcagj0.gif'
             }
-            layout={'fill'}
+            alt={'Blog post image'}
+            objectFit={'cover'}
+            w={'100%'}
+            h={'100%'}
           />
         </Box>
         <Stack>
@@ -41,29 +44,30 @@ export default function blogPostWithImage() {
             fontWeight={800}
             fontSize={'sm'}
             letterSpacing={1.1}>
-            Blog
+            Sobre mim
           </Text>
           <Heading
             color={useColorModeValue('gray.700', 'white')}
             fontSize={'2xl'}
             fontFamily={'body'}>
-            Boost your conversion rate
+            Quem sou eu? ¯\_(ツ)_/¯
           </Heading>
           <Text color={'gray.500'}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum.
+            Estudante de ADS na Fatec Indaiatuba.
+            Atualmente estou pirando na batatinha graças ao meu projeto de iniciação científica 😭
+            Mandem socorro.
+            PS. Pega leve nas atividades professor...
+          </Text>
+          <Text color={'gray.500'}>
+            PS.: Caro professor, tenha misericordia 🍕
           </Text>
         </Stack>
         <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
           <Avatar
-            src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
-            alt={'Author'}
+            src={'https://cdn.awsli.com.br/600x1000/1594/1594408/produto/148206698b1952a3f7d.jpg'}
           />
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text fontWeight={600}>Achim Rolle</Text>
-            <Text color={'gray.500'}>Feb 08, 2021 · 6min read</Text>
+            <Text fontWeight={600}>Sabrina Onishi</Text>
           </Stack>
         </Stack>
       </Box>

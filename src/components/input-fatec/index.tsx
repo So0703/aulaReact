@@ -1,51 +1,67 @@
 import {
-    Button,
-    FormControl,
-    Flex,
-    Heading,
-    Input,
-    Stack,
-    Text,
-    useColorModeValue,
-  } from '@chakra-ui/react';
-  
-  type FormInputs = {
-    task: string;
-  };
-  
-  export default function InputTaskForm(): JSX.Element {
-    return (
+  Container,
+  SimpleGrid,
+  Flex,
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  Checkbox,
+  Stack,
+  Link,
+  Button,
+  Heading,
+  Text,
+  useColorModeValue,
+  Image,
+  StackDivider,
+  Icon,
+} from '@chakra-ui/react';
+
+const Feature = ({ text }: FeatureProps) => {
+  return (
+    <Stack direction={'row'} align={'center'}>
       <Flex
-        minH={'100vh'}
+        w={8}
+        h={8}
         align={'center'}
         justify={'center'}
-        bg={useColorModeValue('gray.50', 'gray.800')}>
-        <Stack
-          spacing={4}
-          w={'full'}
-          maxW={'md'}
+        rounded={'full'}>
+      </Flex>
+      <Text fontWeight={600}>{text}</Text>
+    </Stack>
+  );
+};
+
+export default function SimpleCard() {
+  return (
+    <Flex
+      minH={'100vh'}
+      align={'center'}
+      justify={'center'}
+      bg={useColorModeValue('gray.50', 'gray.800')}>
+      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+        <Stack align={'center'}>
+          <Heading fontSize={'4xl'}>Lista de Tarefas</Heading>
+
+        </Stack>
+        <Box
+          rounded={'lg'}
           bg={useColorModeValue('white', 'gray.700')}
-          rounded={'xl'}
           boxShadow={'lg'}
-          p={6}
-          my={12}>
-          <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
-            Lista de Tarefas
-          </Heading>
-          <Text
-            fontSize={{ base: 'sm', sm: 'md' }}
-            color={useColorModeValue('gray.800', 'gray.400')}>
-            Inserir nova tarefa
-          </Text>
+          p={8}>
+          <Stack spacing={4}>
           <FormControl id="task">
-            <Input
-              placeholder="Digite o título da task"
-              _placeholder={{ color: 'gray.500' }}
-              type="task"
-            />
-          </FormControl>
-          <Stack spacing={6}>
+              <FormLabel>Inserir nova tarefa</FormLabel>
+            </FormControl>
+          <Stack direction={{ base: 'column', md: 'row' }} spacing={5}>
+            <Input 
+            placeholder="Digite a tarefa"
+            _placeholder={{ color: 'gray.500' }}
+            type="task" />
+            <Checkbox>Realizada?</Checkbox>
             <Button
+              rounded={7}
               bg={'blue.400'}
               color={'white'}
               _hover={{
@@ -53,8 +69,86 @@ import {
               }}>
               Inserir
             </Button>
+            </Stack>
           </Stack>
-        </Stack>
-      </Flex>
-    );
-  }
+        </Box>
+        <Box
+          rounded={'lg'}
+          bg={useColorModeValue('white', 'gray.700')}
+          boxShadow={'lg'}
+          p={8}>
+          <Stack direction={{ base: 'column', md: 'row' }} spacing={4} bg={'gray.100'} mx={'auto'} maxW={'lg'} py={3} px={6} marginBottom={5} rounded={7}>
+          <Feature
+             text={'Tarefa 1'}
+           />
+           <Button
+              rounded={7}
+              bg={'red.400'}
+              color={'white'}
+              _hover={{
+                bg: 'red.500',
+              }}>
+              Pendente
+            </Button>
+            <Button
+              rounded={7}
+              bg={'red.400'}
+              color={'white'}
+              _hover={{
+                bg: 'red.500',
+              }}>
+              Excluir
+            </Button>
+            </Stack>
+            <Stack direction={{ base: 'column', md: 'row' }} spacing={4} bg={'gray.100'} mx={'auto'} maxW={'lg'} py={3} px={6} marginBottom={5} rounded={7}>
+          <Feature
+             text={'Tarefa 2'}
+           />
+           <Button
+              rounded={7}
+              bg={'red.400'}
+              color={'white'}
+              _hover={{
+                bg: 'red.500',
+              }}>
+              Pendente
+            </Button>
+            <Button
+              rounded={7}
+              bg={'red.400'}
+              color={'white'}
+              _hover={{
+                bg: 'red.500',
+              }}>
+              Excluir
+            </Button>
+            </Stack>
+            <Stack direction={{ base: 'column', md: 'row' }} spacing={4} bg={'gray.100'} mx={'auto'} maxW={'lg'} py={3} px={6} rounded={7}>
+          <Feature
+             text={'Tarefa 3'}
+           />
+           <Button
+              rounded={7}
+              bg={'red.400'}
+              color={'white'}
+              _hover={{
+                bg: 'red.500',
+              }}>
+              Pendente
+            </Button>
+            <Button
+              rounded={7}
+              bg={'red.400'}
+              color={'white'}
+              _hover={{
+                bg: 'red.500',
+              }}>
+              Excluir
+            </Button>
+            </Stack>
+        </Box>
+        
+      </Stack>
+    </Flex>
+  );
+}

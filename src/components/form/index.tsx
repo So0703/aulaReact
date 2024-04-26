@@ -17,7 +17,6 @@ import {
     useColorModeValue,
     VStack,
   } from '@chakra-ui/react';
-  import React from 'react';
   import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs';
   import { MdEmail, MdOutlineEmail } from 'react-icons/md';
   
@@ -60,7 +59,7 @@ import {
                   base: '4xl',
                   md: '5xl',
                 }}>
-                Get in Touch
+                Entre em contato
               </Heading>
   
               <Stack
@@ -141,11 +140,11 @@ import {
                   shadow="base">
                   <VStack spacing={5}>
                     <FormControl isRequired>
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel>Nome</FormLabel>
   
                       <InputGroup>
                         <InputLeftElement children={<BsPerson />} />
-                        <Input type="text" name="name" placeholder="Your Name" />
+                        <Input type="text" name="name" placeholder="Seu Name" />
                       </InputGroup>
                     </FormControl>
   
@@ -157,17 +156,17 @@ import {
                         <Input
                           type="email"
                           name="email"
-                          placeholder="Your Email"
+                          placeholder="Seu Email"
                         />
                       </InputGroup>
                     </FormControl>
   
                     <FormControl isRequired>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>Mensagem</FormLabel>
   
                       <Textarea
                         name="message"
-                        placeholder="Your Message"
+                        placeholder="Sua Mensagem"
                         rows={6}
                         resize="none"
                       />
@@ -181,7 +180,7 @@ import {
                         bg: 'blue.500',
                       }}
                       isFullWidth>
-                      Send Message
+                      Enviar Mensagem
                     </Button>
                   </VStack>
                 </Box>
