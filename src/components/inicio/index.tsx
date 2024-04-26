@@ -40,7 +40,7 @@ export default function CallToActionWithIllustration() {
             <a href="/tarefas">Comece aqui</a>
           </Button>
           <Button rounded={'full'} px={6}>
-          <a href="/sobre">Sobre nós</a>
+          <a href="/sobre">Sobre mim</a>
           </Button>
         </Stack>
         
